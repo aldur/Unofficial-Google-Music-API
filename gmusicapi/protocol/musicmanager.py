@@ -11,7 +11,7 @@ import sys
 import dateutil.parser
 from decorator import decorator
 from google.protobuf.message import DecodeError
-import mutagen
+import mutagenx
 from oauth2client.client import OAuth2Credentials
 
 from gmusicapi.compat import json
@@ -88,7 +88,7 @@ class MmCall(Call):
             res_msg.ParseFromString(response.content)
         except DecodeError as e:
             trace = sys.exc_info()[2]
-            raise ParseException(str(e)), None, trace
+            raise ParseException(str(e)).with_traceback(trace)
             pass
 
         return res_msg
@@ -209,7 +209,7 @@ class UploadMetadata(MmCall):
         elif isinstance(audio, mutagen.asf.ASF):
             #WMA entries store more info than just the value.
             #Monkeypatch in a dict {key: value} to keep interface the same for all filetypes.
-            asf_dict = dict((k, [ve.value for ve in v]) for (k, v) in audio.tags.as_dict().items())
+            asf_dict = dict((k, [ve.value for ve in v]) for (k, v) in list(audio.tags.as_dict().items()))
             audio.tags = asf_dict
 
         track.duration_millis = int(audio.info.length * 1000)
@@ -260,15 +260,15 @@ class UploadMetadata(MmCall):
         #Mass-populate the rest of the simple fields.
         #Merge shared and unshared fields into {mutagen: Track}.
         fields = dict(
-            dict((shared, shared) for shared in cls.shared_fields).items() +
-            cls.field_map.items()
+            list(dict((shared, shared) for shared in cls.shared_fields).items()) +
+            list(cls.field_map.items())
         )
 
-        for mutagen_f, track_f in fields.items():
+        for mutagen_f, track_f in list(fields.items()):
             if mutagen_f in audio:
                 track_set(track_f, audio[mutagen_f][0])
 
-        for mutagen_f, (track_f, track_total_f) in cls.count_fields.items():
+        for mutagen_f, (track_f, track_total_f) in list(cls.count_fields.items()):
             if mutagen_f in audio:
                 numstrs = str(audio[mutagen_f][0]).split("/")
                 track_set(track_f, numstrs[0])
@@ -379,7 +379,7 @@ class GetUploadSession(MmCall):
         #Insert the inline info.
         for key in inlined:
             payload = inlined[key]
-            if not isinstance(payload, basestring):
+            if not isinstance(payload, str):
                 payload = str(payload)
 
             message['createSessionRequest']['fields'].append(

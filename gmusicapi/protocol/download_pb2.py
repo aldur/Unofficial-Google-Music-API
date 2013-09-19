@@ -80,14 +80,14 @@ _GETTRACKSTOEXPORTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_id', full_name='GetTracksToExportRequest.client_id', index=0,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetTracksToExportRequest.continuation_token', index=1,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -130,35 +130,35 @@ _DOWNLOADTRACKINFO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='DownloadTrackInfo.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='title', full_name='DownloadTrackInfo.title', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album', full_name='DownloadTrackInfo.album', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album_artist', full_name='DownloadTrackInfo.album_artist', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='artist', full_name='DownloadTrackInfo.artist', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -214,7 +214,7 @@ _GETTRACKSTOEXPORTRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetTracksToExportResponse.continuation_token', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -248,20 +248,17 @@ DESCRIPTOR.message_types_by_name['GetTracksToExportRequest'] = _GETTRACKSTOEXPOR
 DESCRIPTOR.message_types_by_name['DownloadTrackInfo'] = _DOWNLOADTRACKINFO
 DESCRIPTOR.message_types_by_name['GetTracksToExportResponse'] = _GETTRACKSTOEXPORTRESPONSE
 
-class GetTracksToExportRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetTracksToExportRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETTRACKSTOEXPORTREQUEST
   
   # @@protoc_insertion_point(class_scope:GetTracksToExportRequest)
 
-class DownloadTrackInfo(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class DownloadTrackInfo(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _DOWNLOADTRACKINFO
   
   # @@protoc_insertion_point(class_scope:DownloadTrackInfo)
 
-class GetTracksToExportResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetTracksToExportResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETTRACKSTOEXPORTRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetTracksToExportResponse)

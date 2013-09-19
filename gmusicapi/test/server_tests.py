@@ -190,7 +190,7 @@ class UpauthTests(object):
             # Otherwise, it should have been uploaded normally.
             assert_equal(not_uploaded, {})
             assert_equal(matched, {})
-            assert_equal(uploaded.keys(), [fname])
+            assert_equal(list(uploaded.keys()), [fname])
 
             sids.append(uploaded[fname])
 
@@ -577,7 +577,7 @@ class UpauthTests(object):
     def mc_search_aa(self):
         res = self.mc.search_all_access('amorphis')
         with Check() as check:
-            for hits in res.values():
+            for hits in list(res.values()):
                 check.true(len(hits) > 0)
 
     @test

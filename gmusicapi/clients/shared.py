@@ -3,10 +3,8 @@ import logging
 from gmusicapi.utils import utils
 
 
-class _Base(object):
+class _Base(object, metaclass=utils.DocstringInheritMeta):
     """Factors out common client setup."""
-
-    __metaclass__ = utils.DocstringInheritMeta
 
     num_clients = 0  # used to disambiguate loggers
 

@@ -1,7 +1,7 @@
 import os
 from socket import gethostname
 import time
-import urllib
+import urllib.request, urllib.parse, urllib.error
 from uuid import getnode as getmac
 import webbrowser
 
@@ -65,18 +65,18 @@ class Musicmanager(_Base):
         flow = OAuth2WebServerFlow(*musicmanager.oauth)
 
         auth_uri = flow.step1_get_authorize_url()
-        print
-        print "Visit the following url:\n %s" % auth_uri
+        print()
+        print("Visit the following url:\n %s" % auth_uri)
 
         if open_browser:
-            print
-            print 'Opening your browser to it now...',
+            print()
+            print('Opening your browser to it now...', end=' ')
             webbrowser.open(auth_uri)
-            print 'done.'
-            print "If you don't see your browser, you can just copy and paste the url."
-            print
+            print('done.')
+            print("If you don't see your browser, you can just copy and paste the url.")
+            print()
 
-        code = raw_input("Follow the prompts,"
+        code = input("Follow the prompts,"
                          " then paste the auth code here and hit enter: ")
 
         credentials = flow.step2_exchange(code)
@@ -156,7 +156,7 @@ class Musicmanager(_Base):
         Return True on success; see :py:func:`login` for params.
         """
 
-        if isinstance(oauth_credentials, basestring):
+        if isinstance(oauth_credentials, str):
             oauth_file = oauth_credentials
             if oauth_file == OAUTH_FILEPATH:
                 utils.make_sure_path_exists(os.path.dirname(OAUTH_FILEPATH), 0o700)
@@ -201,7 +201,7 @@ class Musicmanager(_Base):
                              ' (eg "00:11:22:33:AA:BB")')
 
         if uploader_name is None:
-            uploader_name = gethostname() + u" (gmusicapi-%s)" % gmusicapi.__version__
+            uploader_name = gethostname() + " (gmusicapi-%s)" % gmusicapi.__version__
 
         try:
             # this is a MM-specific step that might register a new device.
@@ -333,7 +333,7 @@ class Musicmanager(_Base):
 
         cd_header = response.headers['content-disposition']
 
-        filename = urllib.unquote(cd_header.split("filename*=UTF-8''")[-1])
+        filename = urllib.parse.unquote(cd_header.split("filename*=UTF-8''")[-1])
         filename = filename.decode('utf-8')
 
         return (filename, response.content)
@@ -344,7 +344,7 @@ class Musicmanager(_Base):
     #     #protocol incorrect here...
     #     return (quota.maximumTracks, quota.totalTracks, quota.availableTracks)
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit(return_code='{}')
     def upload(self, filepaths, transcode_quality=3, enable_matching=False):
         """Uploads the given filepaths.
@@ -432,7 +432,7 @@ class Musicmanager(_Base):
 
         #Upload metadata; the server tells us what to do next.
         res = self._make_call(musicmanager.UploadMetadata,
-                              [track for (path, track) in local_info.values()],
+                              [track for (path, track) in list(local_info.values())],
                               self.uploader_id)
 
         #TODO checking for proper contents should be handled in verification
@@ -499,7 +499,7 @@ class Musicmanager(_Base):
             #TODO reordering requests could avoid wasting time waiting for reup sync
             self._make_call(musicmanager.UpdateUploadState, 'start', self.uploader_id)
 
-            for server_id, (path, track, do_not_rematch) in to_upload.items():
+            for server_id, (path, track, do_not_rematch) in list(to_upload.items()):
                 #It can take a few tries to get an session.
                 should_retry = True
                 attempts = 0

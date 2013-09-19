@@ -82,7 +82,7 @@ class BuildRequestMeta(type):
         def req_closure(config=config):
             def build_request(cls, *args, **kwargs):
                 req_kwargs = {}
-                for key, val in config.items():
+                for key, val in list(config.items()):
                     if hasattr(val, '__call__'):
                         val = val(*args, **kwargs)
 
@@ -96,7 +96,7 @@ class BuildRequestMeta(type):
         return new_cls
 
 
-class Call(object):
+class Call(object, metaclass=BuildRequestMeta):
     """
     Clients should use Call.perform().
 
@@ -148,8 +148,6 @@ class Call(object):
     Calls are organized semantically, so one endpoint might have multiple calls.
     """
 
-    __metaclass__ = BuildRequestMeta
-
     gets_logged = True
 
     required_auth = authtypes()  # all false by default
@@ -198,7 +196,7 @@ class Call(object):
             log.debug("%s(args=%s, kwargs=%s)",
                       call_name,
                       [utils.truncate(a) for a in args],
-                      dict((k, utils.truncate(v)) for (k, v) in kwargs.items())
+                      dict((k, utils.truncate(v)) for (k, v) in list(kwargs.items()))
                       )
         else:
             log.debug("%s(<omitted>)", call_name)
@@ -258,7 +256,7 @@ class Call(object):
                            e_message=e.message,
                            req_kwargs=safe_req_kwargs,
                            content=response.content)
-            raise CallFailure(err_msg, e.callname), None, trace
+            raise CallFailure(err_msg, e.callname).with_traceback(trace)
 
         except ValidationException as e:
             #TODO shouldn't be using formatting
@@ -288,7 +286,7 @@ class Call(object):
             return json.loads(text)
         except ValueError as e:
             trace = sys.exc_info()[2]
-            raise ParseException(str(e)), None, trace
+            raise ParseException(str(e)).with_traceback(trace)
 
     @staticmethod
     def _filter_proto(msg, make_copy=True):
@@ -358,7 +356,7 @@ class ClientLogin(Call):
             source = 'gmusicapi-' + gmusicapi.__version__
 
         return dict(
-            (name, val) for (name, val) in locals().items()
+            (name, val) for (name, val) in list(locals().items())
             if name in set(('Email', 'Passwd', 'accountType', 'service', 'source',
                             'logintoken', 'logincaptcha'))
         )

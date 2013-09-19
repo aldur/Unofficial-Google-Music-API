@@ -200,7 +200,7 @@ class McCall(Call):
             return validictory.validate(msg, cls._res_schema)
         except ValueError as e:
             trace = sys.exc_info()[2]
-            raise ValidationException(str(e)), None, trace
+            raise ValidationException(str(e)).with_traceback(trace)
 
     @classmethod
     def check_success(cls, response, msg):
@@ -379,7 +379,7 @@ class GetStreamUrl(McCall):
                            'GJI30aswkgCWTDyHkTGK9ynlqTkJ5L4CiGGUabGeo8M6JTQ==')
 
     # bitwise and of _s1 and _s2 ascii, converted to string
-    _key = ''.join([chr(ord(c1) ^ ord(c2)) for (c1, c2) in zip(_s1, _s2)])
+    _key = ''.join([chr(ord(chr(c1)) ^ ord(chr(c2))) for (c1, c2) in zip(_s1, _s2)])
 
     @classmethod
     def get_signature(cls, song_id, salt=None):
@@ -668,7 +668,7 @@ class BatchMutateTracks(McBatchMutateCall):
                    ):
             del track_dict[key]
 
-        for key, default in {
+        for key, default in list({
             'playCount': 0,
             'rating': '0',
             'genre': '',
@@ -678,7 +678,7 @@ class BatchMutateTracks(McBatchMutateCall):
             'composer': '',
             'creationTimestamp': '-1',
             'totalDiscCount': 0,
-        }.items():
+        }.items()):
             track_dict.setdefault(key, default)
 
         # TODO unsure about this

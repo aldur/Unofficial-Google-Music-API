@@ -7,7 +7,7 @@ from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 
-import uits_pb2
+from . import uits_pb2
 
 DESCRIPTOR = descriptor.FileDescriptor(
   name='locker.proto',
@@ -1014,7 +1014,7 @@ _AUDIOREF = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='url', full_name='AudioRef.url', index=2,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1106,7 +1106,7 @@ _IMAGEREF = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='url', full_name='ImageRef.url', index=3,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1150,7 +1150,7 @@ _UPLOADEDUITSID3TAG = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='owner', full_name='UploadedUitsId3Tag.owner', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1185,14 +1185,14 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='Track.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='Track.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1220,14 +1220,14 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='title', full_name='Track.title', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='artist', full_name='Track.artist', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1241,42 +1241,42 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='composer', full_name='Track.composer', index=8,
       number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album', full_name='Track.album', index=9,
       number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album_artist', full_name='Track.album_artist', index=10,
       number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='canonical_album', full_name='Track.canonical_album', index=11,
       number=56, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='canonical_artist', full_name='Track.canonical_artist', index=12,
       number=57, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='canonical_genre_album', full_name='Track.canonical_genre_album', index=13,
       number=58, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1290,7 +1290,7 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='comment', full_name='Track.comment', index=15,
       number=12, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1304,7 +1304,7 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='genre', full_name='Track.genre', index=17,
       number=14, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1423,14 +1423,14 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='store_id', full_name='Track.store_id', index=34,
       number=33, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='metajam_id', full_name='Track.metajam_id', index=35,
       number=34, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1444,7 +1444,7 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uits', full_name='Track.uits', index=37,
       number=35, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1493,14 +1493,14 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='album_metajam_id', full_name='Track.album_metajam_id', index=44,
       number=42, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='transaction_id', full_name='Track.transaction_id', index=45,
       number=45, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1514,63 +1514,63 @@ _TRACK = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='normalized_title', full_name='Track.normalized_title', index=47,
       number=48, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='normalized_artist', full_name='Track.normalized_artist', index=48,
       number=49, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='normalized_album', full_name='Track.normalized_album', index=49,
       number=50, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='normalized_album_artist', full_name='Track.normalized_album_artist', index=50,
       number=51, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='normalized_canonical_album', full_name='Track.normalized_canonical_album', index=51,
       number=54, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='normalized_canonical_artist', full_name='Track.normalized_canonical_artist', index=52,
       number=55, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='Track.uploader_id', index=53,
       number=52, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_album_id', full_name='Track.client_album_id', index=54,
       number=53, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='label_owner_code', full_name='Track.label_owner_code', index=55,
       number=60, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1645,14 +1645,14 @@ _PLAYLIST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='Playlist.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='Playlist.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1680,7 +1680,7 @@ _PLAYLIST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='name', full_name='Playlist.name', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1730,7 +1730,7 @@ _PLAYLISTENTRY = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='playlist_id', full_name='PlaylistEntry.playlist_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1744,28 +1744,28 @@ _PLAYLISTENTRY = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='place_after_entry_id', full_name='PlaylistEntry.place_after_entry_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='track_id', full_name='PlaylistEntry.track_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='id', full_name='PlaylistEntry.id', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='PlaylistEntry.client_id', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1807,14 +1807,14 @@ _PLAYLISTENTRY = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='place_before_entry_id', full_name='PlaylistEntry.place_before_entry_id', index=11,
       number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='string_position', full_name='PlaylistEntry.string_position', index=12,
       number=17, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1850,7 +1850,7 @@ _TRACKSEARCHRESTRICTION = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='value', full_name='TrackSearchRestriction.value', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1994,7 +1994,7 @@ _GETTRACKSREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetTracksRequest.continuation_token', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2072,7 +2072,7 @@ _GETTRACKSRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetTracksResponse.continuation_token', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2129,14 +2129,14 @@ _GETPLAYLISTENTRIESREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetPlaylistEntriesRequest.continuation_token', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='playlist_id_filter', full_name='GetPlaylistEntriesRequest.playlist_id_filter', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2199,7 +2199,7 @@ _GETPLAYLISTENTRIESRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetPlaylistEntriesResponse.continuation_token', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2292,7 +2292,7 @@ _GETPLAYLISTSREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetPlaylistsRequest.continuation_token', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2348,7 +2348,7 @@ _GETPLAYLISTSRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetPlaylistsResponse.continuation_token', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2377,14 +2377,14 @@ _LOOKUPTRACKREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='LookupTrackRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='LookupTrackRequest.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2412,14 +2412,14 @@ _LOOKUPPLAYLISTENTRYREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='LookupPlaylistEntryRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='LookupPlaylistEntryRequest.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2447,14 +2447,14 @@ _LOOKUPPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='LookupPlaylistRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='client_id', full_name='LookupPlaylistRequest.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2602,7 +2602,7 @@ _MUTATETRACKREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='delete_track', full_name='MutateTrackRequest.delete_track', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2623,7 +2623,7 @@ _MUTATETRACKREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='undelete_track', full_name='MutateTrackRequest.undelete_track', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2658,7 +2658,7 @@ _MUTATERESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='MutateResponse.id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2672,7 +2672,7 @@ _MUTATERESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_id', full_name='MutateResponse.client_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2686,7 +2686,7 @@ _MUTATERESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='error_message', full_name='MutateResponse.error_message', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2822,7 +2822,7 @@ _MUTATEPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='delete_playlist', full_name='MutatePlaylistRequest.delete_playlist', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2850,7 +2850,7 @@ _MUTATEPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='undelete_playlist', full_name='MutatePlaylistRequest.undelete_playlist', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2998,7 +2998,7 @@ _MUTATEPLAYLISTENTRYREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='undelete_playlist_entry', full_name='MutatePlaylistEntryRequest.undelete_playlist_entry', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3125,7 +3125,7 @@ _MAGICPLAYLISTSEED = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='seed', full_name='MagicPlaylistSeed.seed', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3161,14 +3161,14 @@ _MAGICPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='playlist_name', full_name='MagicPlaylistRequest.playlist_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='playlist_id', full_name='MagicPlaylistRequest.playlist_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3196,7 +3196,7 @@ _MAGICPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='model_name', full_name='MagicPlaylistRequest.model_name', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3266,7 +3266,7 @@ _FLUSHLOCKERREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='gaia_cookie', full_name='FlushLockerRequest.gaia_cookie', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3413,14 +3413,14 @@ _ALBUM = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='name', full_name='Album.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album_artist', full_name='Album.album_artist', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3455,7 +3455,7 @@ _ALBUM = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='album_metajam_id', full_name='Album.album_metajam_id', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3469,7 +3469,7 @@ _ALBUM = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='artist', full_name='Album.artist', index=8,
       number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3603,7 +3603,7 @@ _ARTIST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='name', full_name='Artist.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3743,7 +3743,7 @@ _MUSICGENRE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='name', full_name='MusicGenre.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3904,7 +3904,7 @@ _GETDYNAMICPLAYLISTENTRIESREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetDynamicPlaylistEntriesRequest.continuation_token', index=3,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3961,7 +3961,7 @@ _GETDYNAMICPLAYLISTENTRIESRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='continuation_token', full_name='GetDynamicPlaylistEntriesResponse.continuation_token', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -4280,14 +4280,14 @@ _PLAYLISTAGGREGATE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='playlist_id', full_name='PlaylistAggregate.playlist_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='name', full_name='PlaylistAggregate.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -4371,7 +4371,7 @@ _REMOTECONTROLCOMMANDREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='command', full_name='RemoteControlCommandRequest.command', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -4604,392 +4604,327 @@ DESCRIPTOR.message_types_by_name['GetPlaylistAggregationsResponse'] = _GETPLAYLI
 DESCRIPTOR.message_types_by_name['RemoteControlCommandRequest'] = _REMOTECONTROLCOMMANDREQUEST
 DESCRIPTOR.message_types_by_name['RemoteControlCommandResponse'] = _REMOTECONTROLCOMMANDRESPONSE
 
-class AudioRef(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AudioRef(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _AUDIOREF
   
   # @@protoc_insertion_point(class_scope:AudioRef)
 
-class ImageRef(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ImageRef(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _IMAGEREF
   
   # @@protoc_insertion_point(class_scope:ImageRef)
 
-class UploadedUitsId3Tag(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadedUitsId3Tag(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADEDUITSID3TAG
   
   # @@protoc_insertion_point(class_scope:UploadedUitsId3Tag)
 
-class Track(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Track(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACK
   
   # @@protoc_insertion_point(class_scope:Track)
 
-class Tracks(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Tracks(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKS
   
   # @@protoc_insertion_point(class_scope:Tracks)
 
-class Playlist(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Playlist(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLIST
   
   # @@protoc_insertion_point(class_scope:Playlist)
 
-class PlaylistEntry(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class PlaylistEntry(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLISTENTRY
   
   # @@protoc_insertion_point(class_scope:PlaylistEntry)
 
-class TrackSearchRestriction(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackSearchRestriction(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSEARCHRESTRICTION
   
   # @@protoc_insertion_point(class_scope:TrackSearchRestriction)
 
-class TrackSearchRestrictionSet(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackSearchRestrictionSet(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSEARCHRESTRICTIONSET
   
   # @@protoc_insertion_point(class_scope:TrackSearchRestrictionSet)
 
-class TrackSortOrder(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackSortOrder(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSORTORDER
   
   # @@protoc_insertion_point(class_scope:TrackSortOrder)
 
-class GetTracksRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetTracksRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETTRACKSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetTracksRequest)
 
-class GetTracksResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetTracksResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETTRACKSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetTracksResponse)
 
-class GetPlaylistEntriesRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistEntriesRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTENTRIESREQUEST
   
   # @@protoc_insertion_point(class_scope:GetPlaylistEntriesRequest)
 
-class GetPlaylistEntriesResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistEntriesResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTENTRIESRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetPlaylistEntriesResponse)
 
-class PlaylistSortOrder(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class PlaylistSortOrder(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLISTSORTORDER
   
   # @@protoc_insertion_point(class_scope:PlaylistSortOrder)
 
-class GetPlaylistsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetPlaylistsRequest)
 
-class GetPlaylistsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetPlaylistsResponse)
 
-class LookupTrackRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class LookupTrackRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _LOOKUPTRACKREQUEST
   
   # @@protoc_insertion_point(class_scope:LookupTrackRequest)
 
-class LookupPlaylistEntryRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class LookupPlaylistEntryRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _LOOKUPPLAYLISTENTRYREQUEST
   
   # @@protoc_insertion_point(class_scope:LookupPlaylistEntryRequest)
 
-class LookupPlaylistRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class LookupPlaylistRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _LOOKUPPLAYLISTREQUEST
   
   # @@protoc_insertion_point(class_scope:LookupPlaylistRequest)
 
-class BatchLookupRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchLookupRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHLOOKUPREQUEST
   
   # @@protoc_insertion_point(class_scope:BatchLookupRequest)
 
-class BatchLookupResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchLookupResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHLOOKUPRESPONSE
   
   # @@protoc_insertion_point(class_scope:BatchLookupResponse)
 
-class MutateTrackRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MutateTrackRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MUTATETRACKREQUEST
   
   # @@protoc_insertion_point(class_scope:MutateTrackRequest)
 
-class MutateResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MutateResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MUTATERESPONSE
   
   # @@protoc_insertion_point(class_scope:MutateResponse)
 
-class BatchMutateTracksRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutateTracksRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATETRACKSREQUEST
   
   # @@protoc_insertion_point(class_scope:BatchMutateTracksRequest)
 
-class BatchMutateTracksResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutateTracksResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATETRACKSRESPONSE
   
   # @@protoc_insertion_point(class_scope:BatchMutateTracksResponse)
 
-class MutatePlaylistRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MutatePlaylistRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MUTATEPLAYLISTREQUEST
   
   # @@protoc_insertion_point(class_scope:MutatePlaylistRequest)
 
-class BatchMutatePlaylistsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutatePlaylistsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATEPLAYLISTSREQUEST
   
   # @@protoc_insertion_point(class_scope:BatchMutatePlaylistsRequest)
 
-class BatchMutatePlaylistsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutatePlaylistsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATEPLAYLISTSRESPONSE
   
   # @@protoc_insertion_point(class_scope:BatchMutatePlaylistsResponse)
 
-class MutatePlaylistEntryRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MutatePlaylistEntryRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MUTATEPLAYLISTENTRYREQUEST
   
   # @@protoc_insertion_point(class_scope:MutatePlaylistEntryRequest)
 
-class BatchMutatePlaylistEntriesRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutatePlaylistEntriesRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATEPLAYLISTENTRIESREQUEST
   
   # @@protoc_insertion_point(class_scope:BatchMutatePlaylistEntriesRequest)
 
-class BatchMutatePlaylistEntriesResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class BatchMutatePlaylistEntriesResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _BATCHMUTATEPLAYLISTENTRIESRESPONSE
   
   # @@protoc_insertion_point(class_scope:BatchMutatePlaylistEntriesResponse)
 
-class MagicPlaylistSeed(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MagicPlaylistSeed(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MAGICPLAYLISTSEED
   
   # @@protoc_insertion_point(class_scope:MagicPlaylistSeed)
 
-class MagicPlaylistRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MagicPlaylistRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MAGICPLAYLISTREQUEST
   
   # @@protoc_insertion_point(class_scope:MagicPlaylistRequest)
 
-class MagicPlaylistResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MagicPlaylistResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MAGICPLAYLISTRESPONSE
   
   # @@protoc_insertion_point(class_scope:MagicPlaylistResponse)
 
-class FlushLockerRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class FlushLockerRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _FLUSHLOCKERREQUEST
   
   # @@protoc_insertion_point(class_scope:FlushLockerRequest)
 
-class FlushLockerResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class FlushLockerResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _FLUSHLOCKERRESPONSE
   
   # @@protoc_insertion_point(class_scope:FlushLockerResponse)
 
-class LockerNotification(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class LockerNotification(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _LOCKERNOTIFICATION
   
   # @@protoc_insertion_point(class_scope:LockerNotification)
 
-class Album(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Album(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ALBUM
   
   # @@protoc_insertion_point(class_scope:Album)
 
-class AlbumSortOrder(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AlbumSortOrder(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ALBUMSORTORDER
   
   # @@protoc_insertion_point(class_scope:AlbumSortOrder)
 
-class GetAlbumsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAlbumsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETALBUMSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetAlbumsRequest)
 
-class GetAlbumsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAlbumsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETALBUMSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetAlbumsResponse)
 
-class Artist(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Artist(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ARTIST
   
   # @@protoc_insertion_point(class_scope:Artist)
 
-class ArtistSortOrder(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ArtistSortOrder(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ARTISTSORTORDER
   
   # @@protoc_insertion_point(class_scope:ArtistSortOrder)
 
-class GetArtistsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetArtistsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETARTISTSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetArtistsRequest)
 
-class GetArtistsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetArtistsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETARTISTSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetArtistsResponse)
 
-class MusicGenre(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MusicGenre(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MUSICGENRE
   
   # @@protoc_insertion_point(class_scope:MusicGenre)
 
-class GenreSortOrder(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GenreSortOrder(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GENRESORTORDER
   
   # @@protoc_insertion_point(class_scope:GenreSortOrder)
 
-class GetGenresRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetGenresRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETGENRESREQUEST
   
   # @@protoc_insertion_point(class_scope:GetGenresRequest)
 
-class GetGenresResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetGenresResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETGENRESRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetGenresResponse)
 
-class GetDynamicPlaylistEntriesRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetDynamicPlaylistEntriesRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETDYNAMICPLAYLISTENTRIESREQUEST
   
   # @@protoc_insertion_point(class_scope:GetDynamicPlaylistEntriesRequest)
 
-class GetDynamicPlaylistEntriesResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetDynamicPlaylistEntriesResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETDYNAMICPLAYLISTENTRIESRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetDynamicPlaylistEntriesResponse)
 
-class GetAggregationsByTrackTypeRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAggregationsByTrackTypeRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETAGGREGATIONSBYTRACKTYPEREQUEST
   
   # @@protoc_insertion_point(class_scope:GetAggregationsByTrackTypeRequest)
 
-class TrackTypeAggregate(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackTypeAggregate(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKTYPEAGGREGATE
   
   # @@protoc_insertion_point(class_scope:TrackTypeAggregate)
 
-class GetAggregationsByTrackTypeResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAggregationsByTrackTypeResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETAGGREGATIONSBYTRACKTYPERESPONSE
   
   # @@protoc_insertion_point(class_scope:GetAggregationsByTrackTypeResponse)
 
-class GetAggregationsByAvailabilityStatusRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAggregationsByAvailabilityStatusRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETAGGREGATIONSBYAVAILABILITYSTATUSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetAggregationsByAvailabilityStatusRequest)
 
-class AvailabilityStatusAggregate(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AvailabilityStatusAggregate(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _AVAILABILITYSTATUSAGGREGATE
   
   # @@protoc_insertion_point(class_scope:AvailabilityStatusAggregate)
 
-class GetAggregationsByAvailabilityStatusResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetAggregationsByAvailabilityStatusResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETAGGREGATIONSBYAVAILABILITYSTATUSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetAggregationsByAvailabilityStatusResponse)
 
-class AddPromoTracksRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AddPromoTracksRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ADDPROMOTRACKSREQUEST
   
   # @@protoc_insertion_point(class_scope:AddPromoTracksRequest)
 
-class AddPromoTracksResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AddPromoTracksResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ADDPROMOTRACKSRESPONSE
   
   # @@protoc_insertion_point(class_scope:AddPromoTracksResponse)
 
-class GetPlaylistAggregationsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistAggregationsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTAGGREGATIONSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetPlaylistAggregationsRequest)
 
-class PlaylistAggregate(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class PlaylistAggregate(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLISTAGGREGATE
   
   # @@protoc_insertion_point(class_scope:PlaylistAggregate)
 
-class GetPlaylistAggregationsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetPlaylistAggregationsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETPLAYLISTAGGREGATIONSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetPlaylistAggregationsResponse)
 
-class RemoteControlCommandRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class RemoteControlCommandRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _REMOTECONTROLCOMMANDREQUEST
   
   # @@protoc_insertion_point(class_scope:RemoteControlCommandRequest)
 
-class RemoteControlCommandResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class RemoteControlCommandResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _REMOTECONTROLCOMMANDRESPONSE
   
   # @@protoc_insertion_point(class_scope:RemoteControlCommandResponse)

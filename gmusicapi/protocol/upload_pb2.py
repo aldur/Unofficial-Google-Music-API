@@ -7,7 +7,7 @@ from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 
-import locker_pb2
+from . import locker_pb2
 
 DESCRIPTOR = descriptor.FileDescriptor(
   name='upload.proto',
@@ -377,7 +377,7 @@ _CHALLENGEINFO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_track_id', full_name='ChallengeInfo.client_track_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -398,7 +398,7 @@ _CHALLENGEINFO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='challenge_user_id', full_name='ChallengeInfo.challenge_user_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -545,7 +545,7 @@ _UPLOADPLAYLISTREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UploadPlaylistRequest.uploader_id', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -580,14 +580,14 @@ _PLAYLISTRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_id', full_name='PlaylistResponse.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='server_id', full_name='PlaylistResponse.server_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -657,7 +657,7 @@ _UPLOADPLAYLISTENTRYREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UploadPlaylistEntryRequest.uploader_id', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -692,14 +692,14 @@ _PLAYLISTENTRYRESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_id', full_name='PlaylistEntryResponse.client_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='server_id', full_name='PlaylistEntryResponse.server_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -762,7 +762,7 @@ _UPLOADMETADATAREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UploadMetadataRequest.uploader_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -797,7 +797,7 @@ _UPDATEUPLOADSTATEREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UpdateUploadStateRequest.uploader_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -826,7 +826,7 @@ _CLIENTSTATEREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='ClientStateRequest.uploader_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -959,7 +959,7 @@ _TRACKSAMPLERESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_track_id', full_name='TrackSampleResponse.client_track_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -973,14 +973,14 @@ _TRACKSAMPLERESPONSE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='server_track_id', full_name='TrackSampleResponse.server_track_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='album_art_url', full_name='TrackSampleResponse.album_art_url', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1023,7 +1023,7 @@ _UPLOADSAMPLEREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UploadSampleRequest.uploader_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1086,7 +1086,7 @@ _IMAGEUNION = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='album_art_url', full_name='ImageUnion.album_art_url', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1207,14 +1207,14 @@ _TRACKSTOUPLOAD = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='client_id', full_name='TracksToUpload.client_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='server_id', full_name='TracksToUpload.server_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1250,7 +1250,7 @@ _GETJOBSREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='GetJobsRequest.uploader_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1313,14 +1313,14 @@ _UPAUTHREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='UpAuthRequest.uploader_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='friendly_name', full_name='UpAuthRequest.friendly_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1348,7 +1348,7 @@ _DELETEUPLOADREQUESTEDREQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='uploader_id', full_name='DeleteUploadRequestedRequest.uploader_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1425,7 +1425,7 @@ _CLIENTPOLICY = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='analytics_url', full_name='ClientPolicy.analytics_url', index=7,
       number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1502,14 +1502,14 @@ _OVERRIDECONFIGVALUE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='key', full_name='OverrideConfigValue.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='value', full_name='OverrideConfigValue.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1637,182 +1637,152 @@ DESCRIPTOR.message_types_by_name['UploadMetadataInternalRequest'] = _UPLOADMETAD
 DESCRIPTOR.message_types_by_name['OverrideConfigValue'] = _OVERRIDECONFIGVALUE
 DESCRIPTOR.message_types_by_name['OverrideConfigValueCollection'] = _OVERRIDECONFIGVALUECOLLECTION
 
-class ResponseStatus(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ResponseStatus(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _RESPONSESTATUS
   
   # @@protoc_insertion_point(class_scope:ResponseStatus)
 
-class UploadOperation(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadOperation(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADOPERATION
   
   # @@protoc_insertion_point(class_scope:UploadOperation)
 
-class ChallengeInfo(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ChallengeInfo(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CHALLENGEINFO
   
   # @@protoc_insertion_point(class_scope:ChallengeInfo)
 
-class SignedChallengeInfo(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class SignedChallengeInfo(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _SIGNEDCHALLENGEINFO
   
   # @@protoc_insertion_point(class_scope:SignedChallengeInfo)
 
-class TrackSample(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackSample(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSAMPLE
   
   # @@protoc_insertion_point(class_scope:TrackSample)
 
-class UploadPlaylistRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadPlaylistRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADPLAYLISTREQUEST
   
   # @@protoc_insertion_point(class_scope:UploadPlaylistRequest)
 
-class PlaylistResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class PlaylistResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLISTRESPONSE
   
   # @@protoc_insertion_point(class_scope:PlaylistResponse)
 
-class UploadPlaylistResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadPlaylistResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADPLAYLISTRESPONSE
   
   # @@protoc_insertion_point(class_scope:UploadPlaylistResponse)
 
-class UploadPlaylistEntryRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadPlaylistEntryRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADPLAYLISTENTRYREQUEST
   
   # @@protoc_insertion_point(class_scope:UploadPlaylistEntryRequest)
 
-class PlaylistEntryResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class PlaylistEntryResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PLAYLISTENTRYRESPONSE
   
   # @@protoc_insertion_point(class_scope:PlaylistEntryResponse)
 
-class UploadPlaylistEntryResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadPlaylistEntryResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADPLAYLISTENTRYRESPONSE
   
   # @@protoc_insertion_point(class_scope:UploadPlaylistEntryResponse)
 
-class UploadMetadataRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadMetadataRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADMETADATAREQUEST
   
   # @@protoc_insertion_point(class_scope:UploadMetadataRequest)
 
-class UpdateUploadStateRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UpdateUploadStateRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPDATEUPLOADSTATEREQUEST
   
   # @@protoc_insertion_point(class_scope:UpdateUploadStateRequest)
 
-class ClientStateRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ClientStateRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CLIENTSTATEREQUEST
   
   # @@protoc_insertion_point(class_scope:ClientStateRequest)
 
-class ClientStateResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ClientStateResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CLIENTSTATERESPONSE
   
   # @@protoc_insertion_point(class_scope:ClientStateResponse)
 
-class UploadMetadataResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadMetadataResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADMETADATARESPONSE
   
   # @@protoc_insertion_point(class_scope:UploadMetadataResponse)
 
-class TrackSampleResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TrackSampleResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSAMPLERESPONSE
   
   # @@protoc_insertion_point(class_scope:TrackSampleResponse)
 
-class UploadSampleRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadSampleRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADSAMPLEREQUEST
   
   # @@protoc_insertion_point(class_scope:UploadSampleRequest)
 
-class UploadSampleResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadSampleResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADSAMPLERESPONSE
   
   # @@protoc_insertion_point(class_scope:UploadSampleResponse)
 
-class ImageUnion(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ImageUnion(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _IMAGEUNION
   
   # @@protoc_insertion_point(class_scope:ImageUnion)
 
-class UploadResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADRESPONSE
   
   # @@protoc_insertion_point(class_scope:UploadResponse)
 
-class TracksToUpload(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TracksToUpload(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRACKSTOUPLOAD
   
   # @@protoc_insertion_point(class_scope:TracksToUpload)
 
-class GetJobsRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetJobsRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETJOBSREQUEST
   
   # @@protoc_insertion_point(class_scope:GetJobsRequest)
 
-class GetJobsResponse(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetJobsResponse(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETJOBSRESPONSE
   
   # @@protoc_insertion_point(class_scope:GetJobsResponse)
 
-class UpAuthRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UpAuthRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPAUTHREQUEST
   
   # @@protoc_insertion_point(class_scope:UpAuthRequest)
 
-class DeleteUploadRequestedRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class DeleteUploadRequestedRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _DELETEUPLOADREQUESTEDREQUEST
   
   # @@protoc_insertion_point(class_scope:DeleteUploadRequestedRequest)
 
-class ClientPolicy(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ClientPolicy(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CLIENTPOLICY
   
   # @@protoc_insertion_point(class_scope:ClientPolicy)
 
-class UploadMetadataInternalRequest(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UploadMetadataInternalRequest(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UPLOADMETADATAINTERNALREQUEST
   
   # @@protoc_insertion_point(class_scope:UploadMetadataInternalRequest)
 
-class OverrideConfigValue(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class OverrideConfigValue(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _OVERRIDECONFIGVALUE
   
   # @@protoc_insertion_point(class_scope:OverrideConfigValue)
 
-class OverrideConfigValueCollection(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class OverrideConfigValueCollection(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _OVERRIDECONFIGVALUECOLLECTION
   
   # @@protoc_insertion_point(class_scope:OverrideConfigValueCollection)

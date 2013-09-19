@@ -232,7 +232,7 @@ _PRODUCTID = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='ProductId.id', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -268,7 +268,7 @@ _ASSETID = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='id', full_name='AssetId.id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -297,14 +297,14 @@ _TRANSACTIONID = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='version', full_name='TransactionId.version', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=True, default_value=unicode("1", "utf-8"),
+      has_default_value=True, default_value=str("1"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='id', full_name='TransactionId.id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -339,7 +339,7 @@ _MEDIAID = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='hash', full_name='MediaId.hash', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -375,7 +375,7 @@ _URLINFO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='url', full_name='UrlInfo.url', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -411,7 +411,7 @@ _COPYRIGHTSTATUS = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='copyright', full_name='CopyrightStatus.copyright', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -440,14 +440,14 @@ _EXTRA = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='type', full_name='Extra.type', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='value', full_name='Extra.value', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -475,21 +475,21 @@ _UITSMETADATA = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='nonce', full_name='UitsMetadata.nonce', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='distributor_id', full_name='UitsMetadata.distributor_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='transaction_date', full_name='UitsMetadata.transaction_date', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -588,14 +588,14 @@ _UITSSIGNATURE = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='key_id', full_name='UitsSignature.key_id', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='value', full_name='UitsSignature.value', index=3,
       number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=str(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -685,62 +685,52 @@ DESCRIPTOR.message_types_by_name['UitsMetadata'] = _UITSMETADATA
 DESCRIPTOR.message_types_by_name['UitsSignature'] = _UITSSIGNATURE
 DESCRIPTOR.message_types_by_name['Uits'] = _UITS
 
-class ProductId(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class ProductId(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _PRODUCTID
   
   # @@protoc_insertion_point(class_scope:ProductId)
 
-class AssetId(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class AssetId(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _ASSETID
   
   # @@protoc_insertion_point(class_scope:AssetId)
 
-class TransactionId(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TransactionId(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TRANSACTIONID
   
   # @@protoc_insertion_point(class_scope:TransactionId)
 
-class MediaId(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class MediaId(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _MEDIAID
   
   # @@protoc_insertion_point(class_scope:MediaId)
 
-class UrlInfo(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UrlInfo(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _URLINFO
   
   # @@protoc_insertion_point(class_scope:UrlInfo)
 
-class CopyrightStatus(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class CopyrightStatus(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _COPYRIGHTSTATUS
   
   # @@protoc_insertion_point(class_scope:CopyrightStatus)
 
-class Extra(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Extra(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _EXTRA
   
   # @@protoc_insertion_point(class_scope:Extra)
 
-class UitsMetadata(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UitsMetadata(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UITSMETADATA
   
   # @@protoc_insertion_point(class_scope:UitsMetadata)
 
-class UitsSignature(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UitsSignature(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UITSSIGNATURE
   
   # @@protoc_insertion_point(class_scope:UitsSignature)
 
-class Uits(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class Uits(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _UITS
   
   # @@protoc_insertion_point(class_scope:Uits)

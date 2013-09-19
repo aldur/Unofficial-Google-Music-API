@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from urlparse import urlparse, parse_qsl
+from urllib.parse import urlparse, parse_qsl
 
 import gmusicapi
 from gmusicapi.clients.shared import _Base
@@ -104,7 +104,7 @@ class Webclient(_Base):
 
         return [s['id'] for s in res['songs']]
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit
     @utils.enforce_ids_param
     def delete_songs(self, song_ids):
@@ -226,9 +226,9 @@ class Webclient(_Base):
 
         #Auto playlist ids are hardcoded in the wc javascript.
         #When testing, an incorrect name here will be caught.
-        return {u'Thumbs up': u'auto-playlist-thumbs-up',
-                u'Last added': u'auto-playlist-recent',
-                u'Free and purchased': u'auto-playlist-promo'}
+        return {'Thumbs up': 'auto-playlist-thumbs-up',
+                'Last added': 'auto-playlist-recent',
+                'Free and purchased': 'auto-playlist-promo'}
 
     @utils.enforce_id_param
     def get_song_download_info(self, song_id):
@@ -318,7 +318,7 @@ class Webclient(_Base):
 
         return ''.join(stream_pieces)
 
-    @utils.accept_singleton(basestring, 2)
+    @utils.accept_singleton(str, 2)
     @utils.empty_arg_shortcircuit(position=2)
     @utils.enforce_ids_param(position=2)
     def add_songs_to_playlist(self, playlist_id, song_ids):
@@ -334,7 +334,7 @@ class Webclient(_Base):
 
         return [(e['songId'], e['playlistEntryId']) for e in new_entries]
 
-    @utils.accept_singleton(basestring, 2)
+    @utils.accept_singleton(str, 2)
     @utils.empty_arg_shortcircuit(position=2)
     def remove_songs_from_playlist(self, playlist_id, sids_to_match):
         """Removes all copies of the given song ids from a playlist.
@@ -362,7 +362,7 @@ class Webclient(_Base):
         else:
             return []
 
-    @utils.accept_singleton(basestring, 2)
+    @utils.accept_singleton(str, 2)
     @utils.empty_arg_shortcircuit(position=2)
     def _remove_entries_from_playlist(self, playlist_id, entry_ids_to_remove):
         """Removes entries from a playlist. Returns a list of removed "sid_eid" strings.
@@ -385,13 +385,13 @@ class Webclient(_Base):
                                 num_not_found, playlist_id)
 
         #Unzip the pairs.
-        sids, eids = zip(*e_s_id_pairs)
+        sids, eids = list(zip(*e_s_id_pairs))
 
         res = self._make_call(webclient.DeleteSongs, sids, playlist_id, eids)
 
         return res['deleteIds']
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit
     @utils.enforce_id_param
     def report_incorrect_match(self, song_ids):
@@ -411,7 +411,7 @@ class Webclient(_Base):
 
         return song_ids
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit
     @utils.enforce_ids_param
     def upload_album_art(self, song_ids, image_filepath):

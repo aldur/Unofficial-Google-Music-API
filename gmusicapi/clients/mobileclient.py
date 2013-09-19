@@ -120,7 +120,7 @@ class Mobileclient(_Base):
 
         return res['mutate_response'][0]['id']
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit
     @utils.enforce_ids_param
     def delete_songs(self, library_song_ids):
@@ -282,7 +282,7 @@ class Mobileclient(_Base):
 
         return playlists
 
-    @utils.accept_singleton(basestring, 2)
+    @utils.accept_singleton(str, 2)
     @utils.empty_arg_shortcircuit(position=2)
     @utils.enforce_ids_param(position=2)
     def add_songs_to_playlist(self, playlist_id, song_ids):
@@ -298,7 +298,7 @@ class Mobileclient(_Base):
 
         return [e['id'] for e in res['mutate_response']]
 
-    @utils.accept_singleton(basestring, 1)
+    @utils.accept_singleton(str, 1)
     @utils.empty_arg_shortcircuit(position=1)
     @utils.enforce_ids_param(position=1)
     def remove_entries_from_playlist(self, entry_ids):
@@ -347,7 +347,7 @@ class Mobileclient(_Base):
 
         return res['mutate_response'][0]['id']
 
-    @utils.accept_singleton(basestring)
+    @utils.accept_singleton(str)
     @utils.empty_arg_shortcircuit
     @utils.enforce_ids_param
     def delete_stations(self, station_ids):
